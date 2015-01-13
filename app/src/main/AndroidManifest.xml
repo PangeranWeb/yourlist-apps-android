@@ -16,6 +16,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".AddProjectActivity" >
+        </activity>
+        <activity
+            android:name=".HomeOwnerActivity" >
+        </activity>
+        <activity
+            android:name=".HomeManagerActivity" >
+        </activity>
+        <activity
+            android:name=".HomeTeamActivity" >
+        </activity>
+        <activity
+            android:name=".SingleProjectOwnerActivity" >
+        </activity>
     </application>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
 
 </manifest>

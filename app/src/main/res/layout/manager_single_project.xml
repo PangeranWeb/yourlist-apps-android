@@ -147,11 +147,39 @@
                 android:textColor="#999999"
                 android:textSize="15dip"
                 android:padding="5dip"
+                android:height="150dp"
                 android:inputType="textMultiLine"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:ems="10"
                 android:id="@+id/textProjectDescription"
                 android:layout_weight="0.69" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_weight="0.04">
+
+                <Button
+                    android:layout_width="147dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Add Jobs"
+                    android:onClick="setProjectManager"
+                    android:id="@+id/buttonAddJobs"
+                    android:layout_gravity="center" />
+
+                <Button
+                    android:layout_width="145dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="View Jobs"
+                    android:onClick="setProjectManager"
+                    android:id="@+id/buttonViewJobs"
+                    android:layout_gravity="center" />
+            </LinearLayout>
 
         </LinearLayout>
         <!-- Login Form Ends -->

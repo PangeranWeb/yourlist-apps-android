@@ -32,7 +32,6 @@ public class HomeOwnerActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Log.d(msg, "Muncul tampilan home owner");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.owner_home);
 
@@ -69,7 +68,6 @@ public class HomeOwnerActivity extends Activity {
         } catch (ExecutionException e) {
             e.printStackTrace();
         }
-        Log.d(msg, "Muncul tampilan home owner end");
     }
 
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
@@ -101,7 +99,6 @@ public class HomeOwnerActivity extends Activity {
         protected String doInBackground(String... params) {
             String respondBack = "";
             try {
-                Constants.User.USER_KEY = "8895a2e62346fa0aa9fc7f47ba3fd5efd6616a86";
                 String respond= sHandler.makeServiceCall(Constants.URL_SERVER+"/api/project/get_projects?key=" + Constants.User.USER_KEY,ServiceHandler.GET);
 
                 return respond;

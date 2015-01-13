@@ -118,10 +118,8 @@ public class LoginActivity extends ActionBarActivity {
                 if (Constants.User.USER_ID_LEVEL == 1) {
                     startActivity(new Intent(getApplicationContext(), HomeOwnerActivity.class));
                 } else if (Constants.User.USER_ID_LEVEL == 2) {
-                    Toast.makeText(getApplicationContext(), "Manager", Toast.LENGTH_LONG).show();
                     startActivity(new Intent(getApplicationContext(), HomeManagerActivity.class));
                 } else {
-                    Toast.makeText(getApplicationContext(), "Team", Toast.LENGTH_LONG).show();
                     startActivity(new Intent(getApplicationContext(), HomeTeamActivity.class));
                 }
                 finish();

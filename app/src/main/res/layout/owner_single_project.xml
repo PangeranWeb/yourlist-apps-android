@@ -153,6 +153,25 @@
                 android:id="@+id/textProjectDescription"
                 android:layout_weight="0.69" />
 
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_weight="0.04" >
+
+                <Button
+                    android:layout_width="147dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Add Manager"
+                    android:onClick="setProjectManager"
+                    android:id="@+id/buttonAddManager"
+                    android:layout_gravity="center" />
+
+            </LinearLayout>
+
         </LinearLayout>
         <!-- Login Form Ends -->
 

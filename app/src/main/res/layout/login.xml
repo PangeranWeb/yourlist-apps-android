@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_weight="1"
+    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:fillViewport="true">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#46000000">
+
+        <!--  Header Starts-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/label_welcome_login"
+            android:id="@+id/textView"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView android:id=
+            "@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/yourlist"
+            android:layout_below="@+id/textView"
+            android:layout_marginTop="15dp"
+            android:maxHeight="100dp"
+            android:layout_alignRight="@+id/textView"
+            android:layout_alignEnd="@+id/textView" />
+        <!--  Header Ends -->
+
+        <!-- Login Form -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView"
+            android:layout_marginTop="150dp"
+            android:layout_marginBottom="40dp"
+            android:background="#46000000"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="false"
+            android:layout_alignWithParentIfMissing="false"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/label_suggestion_login"
+                android:id="@+id/textView2"
+                android:layout_gravity="center_horizontal" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#FFFFFFFF"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="#999999"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="15dip"
+                android:padding="5dip"
+                android:inputType="textPersonName"
+                android:hint="@string/label_field_username_login"
+                android:ems="10"
+                android:id="@+id/textUsername"
+                android:layout_gravity="center_horizontal" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="#FFFFFFFF"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="#999999"
+                android:textSize="15dip"
+                android:padding="5dip"
+                android:inputType="textPassword"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:hint="@string/label_field_password_login"
+                android:ems="10"
+                android:id="@+id/textPassword"
+                android:layout_gravity="center_horizontal" />
+
+            <Button
+                android:layout_width="112dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@string/label_submit_login_login"
+                android:id="@+id/buttonSubmitLogin"
+                android:onClick="loginAction"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0.26" />
+
+        </LinearLayout>
+        <!-- Login Form Ends -->
+
+    </RelativeLayout>
+
+</ScrollView>

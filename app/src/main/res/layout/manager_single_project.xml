@@ -167,7 +167,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="Add Jobs"
-                    android:onClick="setProjectManager"
+                    android:onClick="createJobs"
                     android:id="@+id/buttonAddJobs"
                     android:layout_gravity="center" />
 
@@ -176,7 +176,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="View Jobs"
-                    android:onClick="setProjectManager"
+                    android:onClick="viewJobs"
                     android:id="@+id/buttonViewJobs"
                     android:layout_gravity="center" />
             </LinearLayout>

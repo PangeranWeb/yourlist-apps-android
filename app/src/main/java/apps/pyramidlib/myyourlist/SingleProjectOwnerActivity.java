@@ -1,12 +1,16 @@
 package apps.pyramidlib.myyourlist;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.EditText;
 
 import apps.pyramidlib.myyourlist.connection.ConnectionDetector;
@@ -70,6 +74,18 @@ public class SingleProjectOwnerActivity extends Activity {
         } catch (JSONException e) {
             e.printStackTrace();
         }
+    }
+
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+    public void setProjectManager(View view) {
+        Log.d(msg, "set manager");
+        startActivity(new Intent(
+            getApplicationContext(),
+            SetManagerProjectOwnerActivity.class)
+                .putExtra("kode_project", kode_project.getText()
+                    .toString()
+                )
+        );
     }
 
     SingleProjectAct singleProjectAct;

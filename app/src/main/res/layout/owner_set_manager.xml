@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_weight="1"
+    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:fillViewport="true">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#46000000">
+
+        <!--  Header Starts-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/label_welcome_login"
+            android:id="@+id/textView"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true" />
+
+        <!-- Login Form -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="#46000000"
+            android:layout_alignParentLeft="true"
+            android:layout_alignWithParentIfMissing="false"
+            android:weightSum="1"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/textView">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginTop="10dp"
+                android:text="Code : "
+                android:layout_gravity="center_horizontal"
+                />
+
+            <EditText
+                android:id="@+id/textKodeProject"
+                android:layout_width="228dp"
+                android:editable="false"
+                android:cursorVisible="false"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:gravity="left|center_vertical"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="Manager Name"
+                android:id="@+id/textView4"
+                android:layout_gravity="center_horizontal" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_weight="0.04" >
+
+                <Button
+                    android:layout_width="147dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Save"
+                    android:onClick="setProjectManager"
+                    android:id="@+id/buttonSetManager"
+                    android:layout_gravity="center" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <!-- Login Form Ends -->
+
+    </RelativeLayout>
+
+</ScrollView>

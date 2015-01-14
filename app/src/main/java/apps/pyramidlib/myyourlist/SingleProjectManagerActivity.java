@@ -1,13 +1,18 @@
 package apps.pyramidlib.myyourlist;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -70,6 +75,30 @@ public class SingleProjectManagerActivity extends Activity {
         } catch (JSONException e) {
             e.printStackTrace();
         }
+    }
+
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+    public void createJobs(View view) {
+        Log.d(msg, "create jobs");
+        startActivity(new Intent(
+             getApplicationContext(),
+             AddJobsManagerActivity.class)
+                 .putExtra("kode_project", kode_project.getText()
+                 .toString()
+             )
+        );
+    }
+
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+    public void viewJobs(View view) {
+        Log.d(msg, "view jobs");
+        startActivity(new Intent(
+             getApplicationContext(),
+             ViewJobsManagerActivity.class)
+                 .putExtra("kode_project", kode_project.getText()
+                 .toString()
+             )
+        );
     }
 
     SingleProjectAct singleProjectAct;

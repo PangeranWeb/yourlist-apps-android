@@ -34,6 +34,15 @@
         <activity
             android:name=".SingleProjectManagerActivity" >
         </activity>
+        <activity
+            android:name=".SetManagerProjectOwnerActivity" >
+        </activity>
+        <activity
+            android:name=".AddJobsManagerActivity" >
+        </activity>
+        <activity
+            android:name=".ViewJobsManagerActivity" >
+        </activity>
     </application>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>

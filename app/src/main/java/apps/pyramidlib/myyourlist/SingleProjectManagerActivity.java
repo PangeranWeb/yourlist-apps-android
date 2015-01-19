@@ -100,6 +100,17 @@ public class SingleProjectManagerActivity extends Activity {
              )
         );
     }
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+    public void viewTeam(View view) {
+        Log.d(msg, "view team");
+        startActivity(new Intent(
+                        getApplicationContext(),
+                        ViewTeamManagerActivity.class)
+                        .putExtra("kode_project", kode_project.getText()
+                                        .toString()
+                        )
+        );
+    }
 
     SingleProjectAct singleProjectAct;
 

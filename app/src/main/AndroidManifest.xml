@@ -43,6 +43,12 @@
         <activity
             android:name=".ViewJobsManagerActivity" >
         </activity>
+        <activity
+            android:name=".ViewTeamManagerActivity" >
+        </activity>
+        <activity
+            android:name=".SingleJobsTeamManagerActivity" >
+        </activity>
     </application>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>

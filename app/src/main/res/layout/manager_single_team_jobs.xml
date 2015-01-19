@@ -20,12 +20,6 @@
             android:layout_marginTop="10dp"
             android:layout_centerHorizontal="true" />
 
-        <!--  Header Ends -->
-
-        <!-- Footer Start -->
-        <!-- Place footer next to header to set z-index property to minus value -->
-        <!-- Footer Ends -->
-
         <!-- Login Form -->
         <LinearLayout
             android:orientation="vertical"
@@ -41,6 +35,15 @@
 
             <TextView
                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                android:text="View Jobs"
+                android:id="@+id/textView8" />
+
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="25dp"
                 android:layout_marginTop="10dp"
                 android:text="Code : "
@@ -50,20 +53,44 @@
             <EditText
                 android:id="@+id/textKodeProject"
                 android:layout_width="228dp"
-                android:editable="false"
-                android:cursorVisible="false"
                 android:layout_height="wrap_content"
+                android:editable="false"
                 android:textAlignment="center"
                 android:gravity="left|center_vertical"
                 android:layout_centerInParent="true"
-                android:layout_gravity="center_horizontal" />
+                android:layout_gravity="center_horizontal"
+                android:text="DULUXBACKEND2014" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
-                android:text="Project Name :"
+                android:text="Name Team"
+                android:id="@+id/textView10" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="#FFFFFFFF"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="#999999"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="15dip"
+                android:padding="5dip"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/namaTeam"
+                android:text="Yohan" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="Module :"
                 android:id="@+id/textView4" />
 
             <EditText
@@ -80,14 +107,15 @@
                 android:inputType="textPersonName"
                 android:ems="10"
                 android:id="@+id/textProjectName"
-                android:layout_gravity="center_horizontal" />
+                android:layout_gravity="center_horizontal"
+                android:text="Authentification" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="10dp"
-                android:text="Project Plaform :"
+                android:text="Time Do"
                 android:id="@+id/textView5" />
 
             <EditText
@@ -104,42 +132,21 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:ems="10"
                 android:id="@+id/textProjectPlatform"
-                android:layout_gravity="center_horizontal" />
+                android:layout_gravity="center_horizontal"
+                android:text="1 Week" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="10dp"
-                android:text="Project Author : "
-                android:id="@+id/textView6" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:background="#FFFFFFFF"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:textColor="#999999"
-                android:textSize="15dip"
-                android:padding="5dip"
-                android:inputType="textPersonName"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:ems="10"
-                android:id="@+id/textProjectAuthor" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="10dp"
-                android:text="Project Description :"
+                android:text="Description :"
                 android:id="@+id/textView7" />
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:height="120dp"
                 android:layout_marginTop="5dp"
                 android:background="#FFFFFFFF"
                 android:layout_marginLeft="10dp"
@@ -147,47 +154,21 @@
                 android:textColor="#999999"
                 android:textSize="15dip"
                 android:padding="5dip"
-                android:height="150dp"
                 android:inputType="textMultiLine"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:ems="10"
                 android:id="@+id/textProjectDescription"
-                android:layout_weight="0.69" />
+                android:text="Buat Sebuah module Authentification menggunakan parameter username dan password, untuk register saat ini belum masuk spesifikasi, mungkin nanti ada revisi setalah change request" />
 
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="wrap_content"
+            <Button
+                android:layout_width="117dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Save"
+                android:layout_marginTop="15dp"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp"
-                android:layout_weight="0.04">
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="Add Jobs"
-                    android:onClick="createJobs"
-                    android:id="@+id/buttonAddJobs"
-                    android:layout_gravity="center" />
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="View Jobs"
-                    android:onClick="viewJobs"
-                    android:id="@+id/buttonViewJobs"
-                    android:layout_gravity="center" />
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="Set Team"
-                    android:onClick="viewTeam"
-                    android:id="@+id/buttonViewTeam"
-                    android:layout_gravity="center" />
-            </LinearLayout>
+                android:onClick="setTeamJobsAction"
+                android:id="@+id/btnSetTeamJobsAction" />
 
         </LinearLayout>
         <!-- Login Form Ends -->

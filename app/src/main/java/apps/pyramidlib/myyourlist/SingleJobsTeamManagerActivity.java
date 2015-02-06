@@ -21,8 +21,8 @@ public class SingleJobsTeamManagerActivity extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.manager_single_team_jobs);
 
-//        kode_project = (EditText) findViewById(R.id.textKodeProject);
-//        kode_project.setText(codeProject);
+        kode_project = (EditText) findViewById(R.id.textKodeProject);
+        kode_project.setText(codeProject);
 
         nama_tim = (EditText) findViewById(R.id.namaTeam);
         nama_tim.setText(namaTeam);

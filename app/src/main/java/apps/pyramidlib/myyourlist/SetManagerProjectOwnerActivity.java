@@ -11,8 +11,10 @@ import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import org.json.JSONArray;
@@ -37,6 +39,7 @@ public class SetManagerProjectOwnerActivity extends Activity {
     private ConnectionDetector connection;
     private EditText kodeProject = null;
     private EditText idUser = null;
+    private String[] arraySpinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +52,14 @@ public class SetManagerProjectOwnerActivity extends Activity {
         kodeProject = (EditText) findViewById(R.id.textKodeProject);
 //        idUser = (EditText) findViewById(R.id.spinner);
         kodeProject.setText(codeProject);
+
+        this.arraySpinner = new String[] {
+                "nia", "avitaunaya", "andylib"
+        };
+        Spinner s = (Spinner) findViewById(R.id.spinner);
+        ArrayAdapter adapter = new ArrayAdapter(this,
+                android.R.layout.simple_spinner_item, arraySpinner);
+        s.setAdapter(adapter);
 
         connection = new ConnectionDetector(this);
     }

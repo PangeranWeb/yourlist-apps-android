@@ -39,7 +39,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
                 android:textAppearance="?android:attr/textAppearanceMediumInverse"
-                android:text="View Team"
+                android:text="View Jobs"
                 android:id="@+id/textView8" />
 
             <TextView
@@ -57,6 +57,7 @@
                 android:textAlignment="center"
                 android:gravity="left|center_vertical"
                 android:layout_centerInParent="true"
+                android:editable="false"
                 android:layout_gravity="center_horizontal" />
 
             <TextView
@@ -64,7 +65,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
-                android:text="List Team :"
+                android:text="Your Jobs :"
                 android:id="@+id/textView4" />
 
             <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
@@ -74,7 +75,7 @@
                 android:fillViewport="true">
 
                 <ListView xmlns:android="http://schemas.android.com/apk/res/android"
-                    android:id="@+id/listView2"
+                    android:id="@+id/listView"
                     android:layout_width="match_parent"
                     android:layout_height="197dp"
                     android:layout_below="@+id/logo"
@@ -86,16 +87,6 @@
                     android:listSelector="@drawable/list_selector"
                     android:layout_weight="0.83" />
             </ScrollView>
-
-            <Button
-                android:layout_width="117dp"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Set Team"
-                android:layout_marginTop="15dp"
-                android:layout_gravity="center_horizontal"
-                android:onClick="setTeamJobsAction"
-                android:id="@+id/btnSetTeamJobsAction" />
 
         </LinearLayout>
         <!-- Login Form Ends -->

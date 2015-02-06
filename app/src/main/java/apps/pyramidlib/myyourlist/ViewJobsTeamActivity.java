@@ -2,7 +2,6 @@ package apps.pyramidlib.myyourlist;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -13,63 +12,70 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 import apps.pyramidlib.myyourlist.connection.ServiceHandler;
 
 /**
- * Created by ALIE on 14/01/2015.
+ * Created by ALIE on 17/01/2015.
  */
-public class ViewJobsManagerActivity extends Activity {
-    Context c;
-    String msg = "View Jobs Project Owner:";
-    ServiceHandler sHandler;
+public class ViewJobsTeamActivity extends Activity{
+    String msg = "View Jobs Team :";
     private EditText kode_project = null;
+    ServiceHandler sHandler;
+
+    List<Jobs> jobsList;
+    TeamManagerAdapter teamManagerAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         String codeProject = getIntent().getExtras().getString("kode_project");
-        Log.d(msg, "View jobs list :" +codeProject);
+        Log.d(msg, "View jobs");
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.manager_view_jobs);
+        setContentView(R.layout.team_view_jobs);
 
         kode_project = (EditText) findViewById(R.id.textKodeProject);
         kode_project.setText(codeProject);
 
-        String getJobsAct = "";
-//        try {
+        jobsList = new ArrayList<Jobs>();
 
-//            getJobsAct = String.valueOf(new GetJobsAction().execute("").get());
-//            Log.d(msg, "View Jobs : " +getJobsAct);
-//            JSONObject respondProject = new JSONObject(getTeamAct);
+        String getJobsAction = "";
+        try {
+            getJobsAction = String.valueOf(new GetJobsAction().execute("").get());
+            Log.d(msg, "jobs : "+ getJobsAction);
+            JSONObject respondProject = new JSONObject(getJobsAction);
 //            if(respondProject.optInt("status", 0) == 1){
 //
 //                JSONArray dataProject =  respondProject.getJSONArray("user");
 //                for (int n = 0; n < dataProject.length(); n++) {
 //
 //                    JSONObject data = dataProject.getJSONObject(n);
-//                    Team team = new Team();
+//                    Jobs jobs = new Jobs();
+//                    jobs.kode_project
+//                    Team jo = new Team();
 //                    team.id_tim= data.getString("id_user");
 //                    team.nama_tim= data.getString("username");
 //                    team.job_tim= "Developer";
 //
-//                    teamList.add(team);
+//                    jobsList.add(team);
 //                }
 //
 //                ListView listView = (ListView) findViewById(R.id.listView2);
 //
-//                teamManagerAdapter = new TeamManagerAdapter(this, teamList);
+//                teamManagerAdapter = new TeamManagerAdapter(this, jobsList);
 //                listView.setAdapter(teamManagerAdapter);
 //
 //                listView.setOnItemClickListener(teamManagerAdapter);
 //            }
-//        } catch (JSONException e) {
-//            e.printStackTrace();
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        } catch (ExecutionException e) {
-//            e.printStackTrace();
-//        }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
     }
 
     GetJobsAction getJobsAction;
@@ -96,7 +102,9 @@ public class ViewJobsManagerActivity extends Activity {
         protected String doInBackground(String... params) {
             String respondBack = "";
             try {
-                String respond= sHandler.makeServiceCall(Constants.URL_SERVER+"/api/project/get_jobs_project?key=" + Constants.User.USER_KEY+"&kode_project=" + kode_project,ServiceHandler.GET);
+                String respond= sHandler.makeServiceCall(Constants.URL_SERVER+"/api/project/get_jobs_by_project_team_get?key=" + Constants.User.USER_KEY +
+                        "&kode_project="+kode_project.getText().toString()
+                        ,ServiceHandler.GET);
 
                 return respond;
 

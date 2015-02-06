@@ -1,11 +1,15 @@
 package apps.pyramidlib.myyourlist;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.ListView;
 
@@ -76,6 +80,18 @@ public class ViewTeamManagerActivity extends Activity {
         } catch (ExecutionException e) {
             e.printStackTrace();
         }
+    }
+
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+    public void setTeamJobsAction(View view) {
+        Log.d(msg, "view all team no in project");
+        startActivity(new Intent(
+                        getApplicationContext(),
+                        SetTeamProjectManagerActivity.class)
+                        .putExtra("kode_project", kode_project.getText()
+                                        .toString()
+                        )
+        );
     }
 
     GetTeamAction getTeamAction;
